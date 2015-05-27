@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1377531229 source:d:\c++\e&e\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<mypolicy.h>
+	<tools.h>
+
+1377531246 source:d:\c++\e&e\source\tools.cpp
+	<tools.h>
+
+1377527113 source:d:\c++\e&e\source\mypolicy.cpp
+	<mypolicy.h>
+	<iostream>
+
+1377511045 source:d:\wxs\coding\e&e\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<mypolicy.h>
+	<tools.h>
+
+1377510448 source:d:\wxs\coding\e&e\source\mypolicy.cpp
+	<mypolicy.h>
+	<iostream>
+
+1377436084 source:d:\wxs\coding\e&e\source\tools.cpp
+	<tools.h>
+
