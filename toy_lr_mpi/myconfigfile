@@ -1,0 +1,6 @@
+-n 1 -host localhost conf/1.sh
+-n 1 -host localhost conf/2.sh
+-n 1 -host localhost conf/3.sh
+-n 1 -host localhost conf/4.sh
+#-n 1 -host 10.110.15.59 conf/5.sh
+#-n 1 -host 10.109.33.94 conf/6.sh
