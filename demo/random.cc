@@ -7,13 +7,17 @@
 
 
 #include "/root/xiaoshu/opensource/code-base/demo/random.h"
+#define MAX_NUM 127
 
 int main() {
-  for (int i = 0; i < 10; ++i) {
-    std::cout << " === " << local_random_engine() << std::endl;
-    auto val = local_normal_real_distribution<double>(0.0, 1.0)(local_random_engine());
-    std::cout << val << std::endl;
+  float sum = 0.0;
+  for (int i = 0; i < MAX_NUM; ++i) {
+    //std::cout << " === " << local_random_engine() << std::endl;
+    auto val = local_normal_real_distribution<double>(0.0, .1)(local_random_engine());
+    sum += val;
+    //std::cout << val << std::endl;
   }
+  std::cout << sum << std::endl;
 
   return 0;
 }
