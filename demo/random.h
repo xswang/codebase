@@ -33,6 +33,12 @@ std::default_random_engine& local_random_engine() {
   return r.engine;
 }
 
+template<class T>
+std::uniform_real_distribution<T>& local_uniform_real_distribution() {
+  static thread_local std::uniform_real_distribution<T> distr;
+  return distr;
+
+}
 
 template<class T>
 std::normal_distribution<T>& local_normal_real_distribution(T avg, T var) {
