@@ -8,12 +8,17 @@
 #include <iostream>
 
 int main() {
-  std::vector<int> a(2, 0);
-  std::vector<std::vector<int>> b;
-  b.assign(3, a);
+  for (int k = 0; k < 100; ++k) {
+    std::vector<double> a;
+    a.assign(2, 0.0);
+    std::vector<std::vector<double>> b;
+    b.assign(3, a);
+    double* bb = &b[0][0];
 
-  std::cout << b.size() << std::endl;
-  std::cout << b[1].size() << std::endl;
-  std::cout << b[0][0] << std::endl;
-  
+    for (int i = 0; i < 2; ++i) {
+      for (int j = 0; j < 3; ++j) {
+        std::cout << bb[i * 2 + j] << std::endl;
+      }
+    }
+  } 
 }

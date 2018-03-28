@@ -18,8 +18,11 @@ int main() {
   for (int i = 0; i < vec.size(); ++i) {
     std::cout << vec[i] << std::endl;
   }
+  std::cout << "ٍ==========" << std::endl;
   int* a = vec.data();
   std::cout << *a << std::endl;
 
+  vec.clear();
+  std::cout << vec.size() << std::endl;
   return 0;
 }
