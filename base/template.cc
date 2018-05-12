@@ -8,29 +8,31 @@
 #include <iostream>
 #include <string>
 
-template<class T, int N = 0>
-void RecurPrint(const T& t1) {
-  std::cout << "Args: " << N << std::endl;
+template<typename T1, int N = 0>
+void RecurPrint(const T1& t1) {
+  std::cout << "N: " << N << std::endl;
 }
 template<class T, class ...Args, int N = 0>
 void RecurPrint(const T& t1, Args... args) {
-  RecurPrint<Args..., N+1>(args...);
+  std::cout << "Args size: " << sizeof...(args) << std::endl;
+  RecurPrint(args...);
 }
 
-template <typename T, int N = 0>
+template <typename T, int N = 2>
 void print(const T& t) {
-  std::cout << "N = " << N << std::endl;
+  std::cout << " print(const T& t) " << std::endl;
 }
 template <typename First, typename... Rest, int N = 0>
 void print(const First& first, const Rest&... rest) {
   std::cout << "sizeof...(Rest): " << sizeof...(Rest) << std::endl;
   std::cout << first << ", ";
-  print<Rest..., N+1>(rest...); // recursive call using pack expansion syntax
+  print(rest...); // recursive call using pack expansion syntax
 }
 
 int main() {
   RecurPrint("1.1", "2.2");
-  // RecurPrint("1.1", "2.2", "3.3");
-  // print(10, 20);
+  RecurPrint("1.1", "2.2", "3.3");
+  print(10, 20);
+  print(10, 20, 30, 40);
   return 0;
 }
