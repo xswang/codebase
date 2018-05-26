@@ -10,6 +10,9 @@
 
 class Test {
  public:
+  Test() {
+    vec_ = {1,2,3};
+  }
   int* value() {
     return p_;
   }
